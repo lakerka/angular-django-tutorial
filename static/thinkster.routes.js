@@ -1,19 +1,18 @@
 (function () {
-  'use strict';
+    'use strict';
 
-  angular
-    .module('thinkster.routes')
-    .config(config);
+    angular
+        .module('thinkster.routes')
+        .config(config);
 
-  config.$inject = ['$routeProvider'];
+    config.$inject = ['$routeProvider'];
 
 
-  function config($routeProvider) {
-      $routeProvider.when('/register', {
-          controller: 'RegisterController',
-          controllerAs: 'vm', // TODO ?
-          templateUrl: '/static/templates/authentication/register.html'
-      }).otherwise('/')
-      // TOOD video from 12:16
-  }
+    function config($routeProvider) {
+        $routeProvider.when('/register', {
+            controller: 'RegisterController',
+            controllerAs: 'vm', // TODO ?
+            templateUrl: '/static/templates/authentication/register.html'
+        }).otherwise('/')
+    }
 })();

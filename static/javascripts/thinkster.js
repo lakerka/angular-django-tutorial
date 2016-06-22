@@ -1,2 +1,8 @@
 angular
-  .module('thinkster', []);
+    .module('thinkster', [
+        'thinkster.routes',
+        'thinkster.authentication'
+    ]);
+
+angular
+    .module('thinkster.routes', ['ngRoute']);
