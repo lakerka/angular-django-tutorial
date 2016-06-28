@@ -5,16 +5,16 @@
     .module('thinkster.authentication.controllers')
     .controller('RegisterController', RegisterController);
 
-  RegisterController.$inject = ['$location', '$scope', 'Authentification'];
+  RegisterController.$inject = ['$location', '$scope', 'Authentication'];
 
 
-  function RegisterController($location, $scope, Authentification) {
+  function RegisterController($location, $scope, Authentication) {
       var vm = this;
 
       vm.register = register;
 
       function register() {
-          Authentification.register(vm.email, vm.password, vm.username);
+          Authentication.register(vm.email, vm.password, vm.username);
       }
   }
 })();
