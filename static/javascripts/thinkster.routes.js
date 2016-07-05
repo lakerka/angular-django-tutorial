@@ -9,10 +9,17 @@
 
 
     function config($routeProvider) {
-        $routeProvider.when('/register', {
-            controller: 'RegisterController',
-            controllerAs: 'vm', // TODO ?
-            templateUrl: '/static/templates/authentication/register.html'
-        }).otherwise('/')
+        $routeProvider
+            .when('/register', {
+                controller: 'RegisterController',
+                controllerAs: 'vm', // TODO what benefits do we get from vm syntax?
+                templateUrl: '/static/templates/authentication/register.html'
+            })
+            .when('/login', {
+                controller: 'LoginController',
+                controllerAs: 'vm',
+                templateUrl: '/static/templates/authentication/login.html'
+            })
+            .otherwise('/')
     }
 })();
