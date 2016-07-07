@@ -7,7 +7,7 @@ from posts.permissions import IsAuthorOfPost
 
 
 class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.order_by('-create_at')
+    queryset = Post.objects.order_by('-created_at')
     serializer_class = PostSerializer
 
     def get_permissions(self):
@@ -27,6 +27,8 @@ class AccountPostsViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
 
     def list(self, request, account_username=None):
+        import ipdb
+        ipdb.set_trace()
         queryset = self.queryset.filter(author__username=account_username)
         serializer = self.serializer_class(queryset, many=True)
 

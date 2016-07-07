@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('thinkster.Layout.controllers')
+        .module('thinkster.layout.controllers')
         .controller('IndexController', IndexController);
 
     IndexController.$inject = ['$scope', 'Authentication', 'Posts', 'Snackbar'];
