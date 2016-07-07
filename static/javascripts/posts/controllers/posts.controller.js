@@ -16,6 +16,7 @@
         activate();
 
         function activate() {
+            // TODO posts are not set on scope, so how do we see posts?
             $scope.$watchCollection(function() { return $scope.posts; }, render);
             $scope.$watch(function() { return $(window).width(); }, render);
         }
