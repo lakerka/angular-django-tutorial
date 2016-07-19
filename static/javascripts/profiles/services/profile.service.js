@@ -21,11 +21,11 @@
         }
 
         function update(profile) {
-            return $http.put('/api/v1/accounts/' + profile.id + '/', profile);
+            return $http.put('/api/v1/accounts/' + profile.username + '/', profile);
         }
 
         function destroy(profile) {
-            return $http.delete('/api/v1/accounts/' + profile.id + '/');
+            return $http.delete('/api/v1/accounts/' + profile.username + '/');
         }
     }
 })();
