@@ -8,6 +8,8 @@
             {{ vm.profile.tagline }}
         </p>
     </div>
+    <!--TODO there is bug where posts do not appear sometimes, I think it is related with directive variable posts-->
+    <!--<h3 ng-repeat="post in vm.posts"> {{ post.content }} </h3>-->
 
     <posts posts="vm.posts"></posts>
 </div>
