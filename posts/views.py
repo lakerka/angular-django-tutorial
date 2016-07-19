@@ -27,8 +27,6 @@ class AccountPostsViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
 
     def list(self, request, account_username=None):
-        import ipdb
-        ipdb.set_trace()
         queryset = self.queryset.filter(author__username=account_username)
         serializer = self.serializer_class(queryset, many=True)
 
