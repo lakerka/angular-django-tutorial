@@ -17,7 +17,10 @@
             })
             .when('/register', {
                 controller: 'RegisterController',
-                controllerAs: 'vm', // TODO what benefits do we get from vm syntax?
+                // TODO what benefits do we get from vm syntax?
+                // in nested controllers we could more easily specify controller from which we want to use
+                // function or variable
+                controllerAs: 'vm',
                 templateUrl: '/static/templates/authentication/register.html'
             })
             .when('/login', {

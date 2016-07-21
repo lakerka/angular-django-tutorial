@@ -16,7 +16,8 @@
         activate();
 
         function activate() {
-            // TODO posts are not set on scope, so how do we see posts?
+            // posts are not set on scope in controller but they are set on scope in
+            // directive via "<posts posts="vm.posts ..."
             $scope.$watchCollection(function() { return $scope.posts; }, render);
             $scope.$watch(function() { return $(window).width(); }, render);
         }
@@ -63,7 +64,8 @@
                     return element.content.length;
                 });
 
-                // TODO why do we multiply by column.length ?
+                // we multiply by column.length because every post takes some additional space
+                // and column.length is post count in column
                 return lengths.reduce(sum, 0) * column.length;
             }
 
