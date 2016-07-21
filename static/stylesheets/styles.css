@@ -21,3 +21,11 @@
     bottom: 20px;
     right: 20px;
 }
+
+.profile {
+
+}
+
+.profile .profile__username, .profile__tagline {
+    text-align: center;
+}
